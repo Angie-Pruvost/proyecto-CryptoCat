@@ -1,0 +1,126 @@
+/* ============================
+   PALETA DE COLORES GLOBAL
+   ============================ */
+
+:root {
+  /* MODO CLARO */
+  --color-bg: #CC87AE;
+  --color-card: #A75182;
+  --color-text: #430025;
+  --color-btn: #872C5F;
+  --color-btn-hover: #671342;
+
+  --color-border: rgba(67, 0, 37, 0.3);
+}
+
+/* ============================
+   MODO OSCURO
+   ============================ */
+
+.dark {
+  --color-bg: #430025;
+  --color-card: #671342;
+  --color-text: #CC87AE;
+  --color-btn: #A75182;
+  --color-btn-hover: #CC87AE;
+
+  --color-border: rgba(204, 135, 174, 0.4);
+}
+
+/* ============================
+   ESTILOS GENERALES
+   ============================ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  transition: 0.3s ease;
+}
+
+/* Formularios */
+input, select {
+  background: var(--color-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: .4rem .6rem;
+  border-radius: 6px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--color-btn);
+}
+
+/* Botones */
+button {
+  background: var(--color-btn);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button:hover {
+  background: var(--color-btn-hover);
+}
+
+/* Fondo oscuro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+}
+
+/* Contenido de la ventana */
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botones básicos */
+.modal-content button {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content button:first-of-type {
+  background: #1b8df0;
+  color: white;
+}
+
+.modal-content button:last-of-type {
+  background: #ccc;
+}
