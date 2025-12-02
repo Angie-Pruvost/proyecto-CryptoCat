@@ -1,15 +1,17 @@
 <template>
   <header class="nav-wrap">
     <div class="nav-inner">
+
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="hamburger" @click="$emit('toggle-menu')">
+        ☰
+      </button>
+
       <div class="brand">
         <h2 class="logo">CryptoCat</h2>
       </div>
 
-      <nav class="navegacion">
-        <router-link to="/" class="nav-link" exact>Alta Cliente</router-link>
-        <router-link to="/nueva-compra" class="nav-link">Nueva compra</router-link>
-        <router-link to="/historial" class="nav-link">Historial</router-link>
-      </nav>
+
 
       <div class="actions">
         <button class="theme-toggle" @click="toggleTheme" :aria-pressed="darkMode">
@@ -20,6 +22,7 @@
     </div>
   </header>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -103,6 +106,21 @@ const aplicarTema = () => {
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+.hamburger {
+  background: var(--color-btn);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.hamburger:hover {
+  background: var(--color-btn-hover);
 }
 
 </style>

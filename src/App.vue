@@ -1,17 +1,25 @@
 <template>
-  <NavBar />
+  <NavBar @toggle-menu="toggleMenu" />
+  <MenuLateral :abierto="menuAbierto" @toggle-menu="toggleMenu" />
+
   <main id="app">
     <router-view />
   </main>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import NavBar from './components/NavBar.vue'
+import MenuLateral from './components/MenuLateral.vue'
 
+const menuAbierto = ref(false)
+
+const toggleMenu = () => {
+  menuAbierto.value = !menuAbierto.value
+}
 </script>
 
 <style scoped>
-/* Si tienes estilos globales específicos para App, los pones aquí o en main.css */
 #app {
   padding: 2rem 1rem;
 }
@@ -41,13 +49,11 @@ import NavBar from './components/NavBar.vue'
   color: white;
 }
 
-/* Activo */
 .router-link-exact-active {
   background: var(--color-btn);
   color: white !important;
 }
 
-/* Botón de tema */
 .theme-toggle {
   position: fixed;
   top: 12px;
@@ -67,7 +73,6 @@ import NavBar from './components/NavBar.vue'
   background: var(--color-btn-hover);
 }
 
-/* RESPONSIVE */
 @media (max-width: 600px) {
   .navegacion {
     flex-direction: column;

@@ -4,13 +4,13 @@
 
 :root {
   /* MODO CLARO */
-  --color-bg: #CC87AE;
-  --color-card: #A75182;
-  --color-text: #430025;
-  --color-btn: #872C5F;
-  --color-btn-hover: #671342;
+  --color-bg: #879dcc;
+  --color-card: #5e51a7;
+  --color-text: #220043;
+  --color-btn: #692c87;
+  --color-btn-hover: #3d1367;
 
-  --color-border: rgba(67, 0, 37, 0.3);
+  --color-border: rgba(0, 0, 0, 0.355);
 }
 
 /* ============================
@@ -18,13 +18,13 @@
    ============================ */
 
 .dark {
-  --color-bg: #430025;
-  --color-card: #671342;
-  --color-text: #CC87AE;
-  --color-btn: #A75182;
-  --color-btn-hover: #CC87AE;
+  --color-bg: #0c4b6f;
+  --color-card: #2b286e;
+  --color-text: #070909;
+  --color-btn: #324c9b;
+  --color-btn-hover: #5f6885;
 
-  --color-border: rgba(204, 135, 174, 0.4);
+  --color-border: rgba(2, 4, 4, 0.4);
 }
 
 /* ============================
